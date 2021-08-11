@@ -11,6 +11,9 @@ const app = Vue.createApp({
         },
         reduce() {
             this.counter--;
+        },
+        submitForm() {
+            alert('Form submitted');
         }
     }
 });
