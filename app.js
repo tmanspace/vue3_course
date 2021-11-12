@@ -12,6 +12,10 @@ const app = Vue.createApp({
         reduce() {
             this.counter--;
         },
+        zeroing() {
+            this.counter = 0;
+            alert('U was zeroed');
+        },
         submitForm() {
             alert('Form submitted');
         }
