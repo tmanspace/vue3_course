@@ -2,7 +2,9 @@ const app = Vue.createApp({
     data() {
         return {
             counter: 0,
-            name: ''
+            name: '',
+            text: '',
+            textTwo: ''
         }
     },
     methods: {
@@ -18,6 +20,15 @@ const app = Vue.createApp({
         },
         submitForm() {
             alert('Form submitted');
+        },
+        showAlert() {
+            alert('Heeeey');
+        },
+        writeText(e) {
+            this.text = e.target.value;
+        },
+        writeTwo(e) {
+            this.textTwo = e.target.value;
         }
     }
 });

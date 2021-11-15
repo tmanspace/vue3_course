@@ -18,9 +18,20 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
+      <div>
+        <button @click="showAlert">Show alert</button>
+      </div>
+      <hr>
       <button @click="add">Add</button>
       <button @click.right="reduce">Remove</button>
       <p>Result: {{ counter }}</p>
+      <hr>
+      <input type="text" @keydown="writeText">
+      <p>{{text}}</p>
+      <hr>
+      <input type="text" @keydown.enter="writeTwo">
+      <p>{{textTwo}}</p>
+      <hr>
       <input type="text" name="name" id="name" v-model='name'>
       <p>Your name: {{name}}</p>
       <form @submit.prevent="submitForm" action="#">
