@@ -18,21 +18,12 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <div>
-        <button @click="showAlert">Show alert</button>
-      </div>
-      <hr>
-      <button @click="add">Add</button>
-      <button @click.right="reduce">Remove</button>
+      <button @click="add(5)">Add 5</button>
+      <button @click="reduce(10)">Reduce 10</button>
       <p>Result: {{ counter }}</p>
       <hr>
-      <input type="text" @keydown="writeText">
-      <p>{{text}}</p>
-      <hr>
-      <input type="text" @keydown.enter="writeTwo">
-      <p>{{textTwo}}</p>
-      <hr>
       <input type="text" name="name" id="name" v-model='name'>
+      <button @click="resetInput">Reset input</button>
       <p>Your name: {{name}}</p>
       <form @submit.prevent="submitForm" action="#">
         <input type="text">

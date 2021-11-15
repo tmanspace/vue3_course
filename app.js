@@ -3,32 +3,20 @@ const app = Vue.createApp({
         return {
             counter: 0,
             name: '',
-            text: '',
-            textTwo: ''
         }
     },
     methods: {
-        add() {
-            this.counter++;
+        add(num) {
+            this.counter += num;
         },
-        reduce() {
-            this.counter--;
-        },
-        zeroing() {
-            this.counter = 0;
-            alert('U was zeroed');
+        reduce(num) {
+            this.counter -= num;
         },
         submitForm() {
             alert('Form submitted');
         },
-        showAlert() {
-            alert('Heeeey');
-        },
-        writeText(e) {
-            this.text = e.target.value;
-        },
-        writeTwo(e) {
-            this.textTwo = e.target.value;
+        resetInput() {
+            this.name = ''; 
         }
     }
 });
