@@ -6,11 +6,19 @@ const app = Vue.createApp({
             surname: 'Serazutdinov'
         }
     },
+    computed: {
+        fullname() {
+            console.log('Running...') // Bad solution
+             if (!this.name) {}
+             else return this.name + ' ' + this.surname;
+        }
+    },
     methods: {
-        outputFullname() {
-            if (!this.name) {}
-            else return this.name + ' ' + this.surname;
-        },
+        // outputFullname() {
+        //     console.log('Running...') // Bad solution
+        //     if (!this.name) {}
+        //     else return this.name + ' ' + this.surname;
+        // },
         add(num) {
             this.counter += num;
         },
