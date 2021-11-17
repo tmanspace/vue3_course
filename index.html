@@ -24,7 +24,8 @@
       <hr>
       <input type="text" name="name" id="name" v-model='name'>
       <button @click="resetInput">Reset input</button>
-      <p>Your name: {{name}}</p>
+      <p>Your name: {{ outputFullname() }}</p> 
+      <!-- Bad solution because of recall of func - computed is the solution -->
       <form @submit.prevent="submitForm" action="#">
         <input type="text">
         <button>Sign up</button>

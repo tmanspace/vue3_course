@@ -3,9 +3,14 @@ const app = Vue.createApp({
         return {
             counter: 0,
             name: '',
+            surname: 'Serazutdinov'
         }
     },
     methods: {
+        outputFullname() {
+            if (!this.name) {}
+            else return this.name + ' ' + this.surname;
+        },
         add(num) {
             this.counter += num;
         },
