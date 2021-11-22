@@ -4,14 +4,15 @@ const app = Vue.createApp({
             counter: 0,
             name: '',
             lastName: '',
-            // fullname: ''
         }
     },
     watch: {
-        counter(val) {
-            if (val > 5) {
-                this.counter = 0;
-            }
+        result() {
+            const that = this;
+            setTimeout( function() {
+                that.counter = 0;
+            }, 5000);
+            
         }
         // method(newValue, oldValue) uneffective if 2 much deps
         // name(val) {
@@ -24,6 +25,13 @@ const app = Vue.createApp({
             console.log('Running...') // Bad solution
              if (!this.name) {}
              else return this.name + ' ' + this.lastName;
+        },
+        result() {
+            if (this.counter < 37) {
+                return 'Not yet!';
+            } else if (this.counter == 37) {
+                return 'Exactly';
+            } else return 'Too much';
         }
     },
     methods: {

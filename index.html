@@ -18,9 +18,9 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button @click="add(2)">Add 2</button>
-      <button @click="reduce(1)">Reduce 1</button>
-      <p>Result: {{ counter }}</p>
+      <button @click="add(5)">Add 5</button>
+      <button @click="add(1)">Add 1</button>
+      <p>Result: {{ result + " (" + counter + ")"  }}</p>
       <hr>
       <input type="text" name="name" id="name" v-model='name'>
       <input type="text" class="text" v-model='lastName'>
