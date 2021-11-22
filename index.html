@@ -17,20 +17,12 @@
       <h1>Vue Events</h1>
     </header>
     <section id="events">
-      <h2>Events in Action</h2>
-      <button @click="add(5)">Add 5</button>
-      <button @click="add(1)">Add 1</button>
-      <p>Result: {{ result + " (" + counter + ")"  }}</p>
-      <hr>
-      <input type="text" name="name" id="name" v-model='name'>
-      <input type="text" class="text" v-model='lastName'>
-      <button @click="resetInput">Reset input</button>
-      <p>Your name: {{ fullname }}</p> 
-      <!-- Bad solution because of recall of func - computed is the solution -->
-      <form @submit.prevent="submitForm" action="#">
-        <input type="text">
-        <button>Sign up</button>
-      </form>
+      <h2>Styling Practice</h2>
+      <input type="text" name="color" id="color" v-model='color'>
+      <p :style="{background: color}">Styled</p> 
+      <button @click="toggleVis">Toggle</button>
+      <input type="text" v-model="classWritten">
+      <p v-show ="visible" :class="classWritten">U see me!</p>
     </section>
   </body>
 </html>
