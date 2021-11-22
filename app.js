@@ -3,14 +3,27 @@ const app = Vue.createApp({
         return {
             counter: 0,
             name: '',
-            surname: 'Serazutdinov'
+            lastName: '',
+            // fullname: ''
         }
+    },
+    watch: {
+        counter(val) {
+            if (val > 5) {
+                this.counter = 0;
+            }
+        }
+        // method(newValue, oldValue) uneffective if 2 much deps
+        // name(val) {
+        //     if (val == '') this.fullname = '';
+        //     this.fullname = val + ' Serazutdinov';
+        // }
     },
     computed: {
         fullname() {
             console.log('Running...') // Bad solution
              if (!this.name) {}
-             else return this.name + ' ' + this.surname;
+             else return this.name + ' ' + this.lastName;
         }
     },
     methods: {

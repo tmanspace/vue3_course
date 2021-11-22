@@ -18,11 +18,12 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button @click="add(5)">Add 5</button>
-      <button @click="reduce(10)">Reduce 10</button>
+      <button @click="add(2)">Add 2</button>
+      <button @click="reduce(1)">Reduce 1</button>
       <p>Result: {{ counter }}</p>
       <hr>
       <input type="text" name="name" id="name" v-model='name'>
+      <input type="text" class="text" v-model='lastName'>
       <button @click="resetInput">Reset input</button>
       <p>Your name: {{ fullname }}</p> 
       <!-- Bad solution because of recall of func - computed is the solution -->
