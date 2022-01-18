@@ -1,20 +1,15 @@
 const app = Vue.createApp({
-    data() {
-        return {
-            color: '',
-            visible: true,
-            classWritten: ''
-        }
-    },
-    watch: {
-    },
-    computed: {
-    },
-    methods: {
-        toggleVis() {
-            this.visible = !this.visible;
-        }
+  data() {
+    return {
+      goals: [],
+      enteredGoalValue: ""
+    };
+  },
+  methods: {
+    addGoal() {
+      this.goals.push(this.enteredGoalValue);
     }
+  }
 });
 
-app.mount('#events');
+app.mount('#user-goals');

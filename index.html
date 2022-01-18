@@ -14,15 +14,19 @@
   </head>
   <body>
     <header>
-      <h1>Vue Events</h1>
+      <h1>Vue Course Goals</h1>
     </header>
-    <section id="events">
-      <h2>Styling Practice</h2>
-      <input type="text" name="color" id="color" v-model='color'>
-      <p :style="{background: color}">Styled</p> 
-      <button @click="toggleVis">Toggle</button>
-      <input type="text" v-model="classWritten">
-      <p v-show ="visible" :class="classWritten">U see me!</p>
+    <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+      <div v-else id="list">
+        <h3>List of goals</h3>
+        <ul>
+          <li>Goal</li>
+        </ul>
+      </div>
     </section>
   </body>
 </html>
